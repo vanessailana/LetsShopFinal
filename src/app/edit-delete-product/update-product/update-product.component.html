@@ -1,0 +1,34 @@
+<div class="container">
+
+    <form (ngSubmit)="processForm()">
+
+<label for="title">Product Name</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="product.title">
+        </div>
+
+       <label for="title">Price</label>
+        <div class="form group">
+            <input type="text" name="price" class="form-control" [(ngModel)]="product.price">
+        </div>
+
+  <label for="title">Department Id</label>
+         <div class="form group">
+            <input type="text" name="deparmentId" class="form-control" [(ngModel)]="product.departmentId">
+        </div>
+
+          <label for="aisleId">Aisle Id</label>
+        <div class="form group">
+            <input type="text" name="aisleId" class="form-control" [(ngModel)]="product.aisleId">
+        </div>
+
+            <label class="bs-switch"> Active?
+              <input type="checkbox"  [checked]="checked" [disabled]="disabled" [(ngModel)]="product.active" name="active">
+              <span class="slider round"></span>
+            </label>
+&nbsp;
+
+            <br><br>
+        <input type="submit" value="save" class="btn btn-primary btn-lg">
+    </form>
+</div>

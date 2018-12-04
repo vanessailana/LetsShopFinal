@@ -1,0 +1,29 @@
+<h1 style="text-align: center">Aisles</h1>
+   <nav class="navbar">
+      <input class="form-control" placeholder="search by name" type="text" name="search" [(ngModel)]="filter">
+    </nav>
+ <div class="text-align:center">
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div>
+   <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Aisle Name</td>
+        <td>Edit </td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of aisles | filter:filter | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 5,
+                                                      currentPage: page,
+                                                      totalItems: totalRec };let i = index">
+        <td>{{user.name}}</td>
+
+ <td><button class="btn btn-danger"  (click)="editAislePage(user)"> Edit </button></td>
+
+ <td></td>
+    </tr>
+
+    </tbody>
+  </table>

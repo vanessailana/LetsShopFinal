@@ -1,0 +1,57 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container" style="text-align: center">
+
+  <h1>
+    Products We Offer
+  </h1>
+  <h2>FYI <i class="fa fa-bell"></i> You can search Product Name, Aisle Name, or Department Name</h2>
+   <nav class="navbar">
+      <input class="form-control" placeholder="Search" type="text" name="search" [(ngModel)]="filter">
+    </nav>
+  <div class="text-align:center">
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Product Name</td>
+        <td>Aisle Name</td>
+        <td>Department Name</td>
+        <td>Price</td>
+        <td>Active?</td>
+        <td>Delete?</td>
+        <td>Edit Product</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of products | filter:filter | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 5,
+                                                      currentPage: page,
+                                                      totalItems: totalRec };let i = index">
+        <td>{{user.title}}</td>
+
+        <td>{{user.aisle.name}}</td>
+
+
+        <td>{{user.department.title}}</td>
+
+
+        <td>{{user.price}}</td>
+
+
+        <td>{{user.active}}</td>
+
+  <td><button class="btn btn-danger" (click)="deleteProduct(user)"> Delete</button></td>
+
+  <td><button class="btn btn-danger" (click)="editProductPage(user)"> Edit </button></td>
+
+ <td></td>
+
+
+
+    </tbody>
+  </table>
+
+</div>

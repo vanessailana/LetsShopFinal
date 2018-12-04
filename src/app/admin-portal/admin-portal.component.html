@@ -1,0 +1,61 @@
+<h1>Admin Portal</h1>
+
+
+<h2 style="text-align: center">Just in case, if you want help <i class="fa fa-smile-o"></i> </h2>
+<a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/profile" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Profile Information<i class="fa fa-spinner fa-spin"></i> </a>
+
+<a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/create" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Create a Product<i class="fa fa-spinner fa-spin"></i> </a>
+
+<a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/aisles" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">View and Edit Aisles<i class="fa fa-spinner fa-spin"></i> </a>
+          <a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/departments" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">View and Edit Departments<i class="fa fa-spinner fa-spin"></i> </a>
+
+          <a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/best-time-order" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">When is the best time to order?<i class="fa fa-spinner fa-spin"></i> </a>
+
+<h1>Calculator for calculating</h1>
+<div class="container" style="margin-left: 300px">
+  <div class="grid">
+    <div class="col-6">
+        <div class="result">
+          <span>
+            Result : {{result}}
+          </span>
+        </div>
+        </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="operation">
+          <div class="row">
+            <div class="col-12">
+              <input [(ngModel)]="number1" type="number" name="" placeholder="number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input [(ngModel)]="number2" type="number" name="" placeholder="number">
+            </div>
+          </div>
+          <div>
+            <div class="button-group">
+<button (click)="add()" class="button">
+                +
+              </button>
+              <button (click)="sub()" class="button">
+                -
+              </button>
+                <button (click)="mult()" class="button">
+                *
+              </button>
+                <button (click)="divide()" class="button">
+                %
+              </button>
+          </div>
+
+</div>
+
+</div>

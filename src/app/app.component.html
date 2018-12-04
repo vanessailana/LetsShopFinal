@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Welcome to LetsShop! <i class="fa fa-shopping-cart"></i> </a>
+      <form class="form-inline">
+        <button class="btn btn-primary my-2 my-sm-0 mr-2"
+          routerLink="/" type="button">
+            Home
+        </button>
+
+        <button id="qsLoginBtn"
+          class="btn btn-primary my-2 my-sm-0"
+          *ngIf="!auth.isAuthenticated()"
+          (click)="auth.login()" type="button">
+            Log In
+        </button>
+
+<a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/help" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Questions? Lets Chat<i class='fa fa-comment'></i> </a>
+
+<a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/offered" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">What We Offer<i class="fa fa-spinner fa-spin"></i> </a>
+
+          <a class="nav-item nav-link"  class="btn btn-primary my-2 my-sm-0" href="/freq" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Frequently Purchased<i class="fa fa-money"></i> </a>
+        <button id="qsLogoutBtn" style="text-align: right"
+          class="btn btn-primary my-2 my-sm-0"
+          *ngIf="auth.isAuthenticated()"
+          (click)="auth.logout()" type="button">
+            Log Out   <h3 class="nickname"></h3> <h3 class="nickname"></h3>
+        </button>
+
+      </form>
+  </div>
+</nav>
+
+<main role="main" class="container">
+
+  <router-outlet></router-outlet>
+</main>

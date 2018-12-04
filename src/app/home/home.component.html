@@ -1,0 +1,40 @@
+<h4 *ngIf="auth.isAuthenticated()">
+ <h1> Hi, welcome </h1>
+    <pre class="full-profile">{{ profile | json }}</pre>
+</h4>
+<h4 *ngIf="!auth.isAuthenticated()">
+  You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
+</h4>
+
+
+   <div class="jumbotron">
+
+<h1 class="line-1 anim-typewriter" style="font-size: 40px">Welcome to LetsShop! <i class="fa fa-shopping-cart"></i> </h1>
+
+
+
+<h4><i class="fa fa-cutlery" style="font-size:48px;color:red"></i> LetsShop's goal is an application that allows the company to do as follows:&nbsp;
+
+
+<ul>
+
+  If you are a guest
+  <li>See what we offer</li>
+  <li>Items Frequently Purchased</li>
+  <li>Opportunity to create an account and receive verification account was created</li>
+</ul>
+<ul>
+
+  If you are a registered user
+   <li> Authorization,Authentication(Token Renewal)</li>
+  <li> Forgot password/reset</li>
+   <li>Create, Edit, and Delete Product Info</li>
+  <li>Edit and View Aisle Information</li>
+   <li>Edit and View Department Information</li>
+   <li>Calculator for determining prices</li>
+   <li>When is the best time to Order?</li>
+
+</ul>
+</h4>
+
+  </div>
