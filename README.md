@@ -1,4 +1,4 @@
-#LetsShop
+# LetsShop
 
 ### As a guest 
 1. See items we offer (the aisle and department)
