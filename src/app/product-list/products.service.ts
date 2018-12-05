@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Http, Response,RequestOptions } from "@angular/http";
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit,Input } from '@angular/core';
 import 'rxjs/add/operator/map'
@@ -24,8 +24,11 @@ export class ProductsService {
 }
 
  getAll(): Observable<any> {
-    return this.http.get('//localhost:8080/api/products');
-  }
+
+ let headers = new Headers({ 'Content-Type': 'application/json' });
+ let options = new RequestOptions({ headers: headers });
+
+return this.http.get('http://localhost:8080/api/products', options);
 
 
 

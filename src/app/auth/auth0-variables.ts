@@ -6,8 +6,8 @@ interface AuthConfig {
 }
 
 export const AUTH_CONFIG: AuthConfig = {
-  clientID: 
-  domain: 
-  callbackURL: 
-  apiUrl:
+  clientID: 'WNpe9mhpApNvI198mBLJwN1v8JwJVpHL',
+  domain: 'letsshop.auth0.com',
+  callbackURL: 'http://localhost:4200/callback',
+  apiUrl:'http://localhost:8083/api/'
 };
