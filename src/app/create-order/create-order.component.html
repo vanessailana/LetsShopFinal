@@ -1,0 +1,26 @@
+<div class="container">
+
+    <form (ngSubmit)="processForm()">
+
+<label for="title">User Order Identification</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.orderNum">
+        </div>
+
+       <label for="title">Product Name</label>
+        <div class="form group">
+            <input type="text" name="productName" class="form-control" [(ngModel)]="order.productName">
+        </div>
+
+
+
+            <label class="bs-switch"> Active?
+              <input type="checkbox"  [checked]="checked" [disabled]="disabled" [(ngModel)]="order.active" name="active">
+              <span class="slider round"></span>
+            </label>
+&nbsp;
+
+            <br><br>
+        <input type="submit" value="save" class="btn btn-primary btn-lg">
+    </form>
+</div>
