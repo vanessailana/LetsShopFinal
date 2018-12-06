@@ -19,10 +19,14 @@ import { CallbackComponent } from './callback/callback.component';
 
 import { HelpChatComponent } from './help-chat/help-chat.component';
 import { ProductListComponent } from './product-list/product-list/product-list.component';
+
+
 import { ProductsService } from './product-list/products.service';
 import { CreateprodService } from './create-product/createprod.service';
 import { AisleService } from './aisles/aisle.service';
 import { DeleteProdService } from './edit-delete-product/delete-prod.service';
+import { CreateOrderService } from './create-order/create-order.service';
+
 import { ItemsFreqPurchasedComponent } from './items-freq-purchased/items-freq-purchased.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { AislesComponent } from './aisles/aisles.component';
@@ -38,6 +42,7 @@ import { EditDeleteProductComponent } from './edit-delete-product/edit-delete-pr
 import { UpdateProductComponent } from './edit-delete-product/update-product/update-product.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { CreateOrderDetailsComponent } from './create-order-details/create-order-details.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +64,7 @@ import { CreateOrderComponent } from './create-order/create-order.component';
     UpdateProductComponent,
     OrdersComponent,
     CreateOrderComponent,
+    CreateOrderDetailsComponent,
 
   ],
   imports: [
@@ -67,7 +73,7 @@ import { CreateOrderComponent } from './create-order/create-order.component';
     HttpModule,HttpClientModule,Ng2SearchPipeModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [AuthService,ProductsService,AisleService, DepartmentsService,CreateprodService,DeleteProdService],
+  providers: [AuthService,ProductsService,AisleService, DepartmentsService,CreateprodService,DeleteProdService,CreateOrderService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
