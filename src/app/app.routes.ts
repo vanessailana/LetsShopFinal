@@ -14,17 +14,31 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { EditDeleteProductComponent } from './edit-delete-product/edit-delete-product.component';
 import { UpdateProductComponent } from './edit-delete-product/update-product/update-product.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
+
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-   { path: 'updateproduct', component: UpdateProductComponent },
+
+{ path: 'updateproduct', component: UpdateProductComponent },
+
   { path: 'callback', component: CallbackComponent },
+
   { path: 'profile', component: ProfileComponent },
+
   { path: 'create', component: CreateProductComponent },
+
   { path: 'update', component: EditDeleteProductComponent },
+
   { path: 'help', component: HelpChatComponent },
-    { path: 'departments', component: DeparmentsComponent },  { path: 'edit_departments', component: EditDepartmentsComponent },
-  { path: 'best-time-order', component:WhensBestTimeOrderComponent },
+
+{ path: 'departments', component: DeparmentsComponent },
+
+{ path: 'edit_departments', component: EditDepartmentsComponent },
+
+{ path: 'best-time-order', component:WhensBestTimeOrderComponent },
+
+{ path: 'create-order', component: CreateOrderComponent },
   { path: 'offered', component: ProductListComponent },
   { path: 'freq', component: ItemsFreqPurchasedComponent},
   { path: 'admin', component: AdminPortalComponent},
