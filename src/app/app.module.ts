@@ -20,12 +20,14 @@ import { CallbackComponent } from './callback/callback.component';
 import { HelpChatComponent } from './help-chat/help-chat.component';
 import { ProductListComponent } from './product-list/product-list/product-list.component';
 
-
+/** service providers*/
 import { ProductsService } from './product-list/products.service';
 import { CreateprodService } from './create-product/createprod.service';
 import { AisleService } from './aisles/aisle.service';
 import { DeleteProdService } from './edit-delete-product/delete-prod.service';
 import { CreateOrderService } from './create-order/create-order.service';
+import { CreateOrderDetailService } from './create-order-details/create-order-detail.service';
+
 
 import { ItemsFreqPurchasedComponent } from './items-freq-purchased/items-freq-purchased.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
@@ -73,7 +75,7 @@ import { CreateOrderDetailsComponent } from './create-order-details/create-order
     HttpModule,HttpClientModule,Ng2SearchPipeModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [AuthService,ProductsService,AisleService, DepartmentsService,CreateprodService,DeleteProdService,CreateOrderService ],
+  providers: [AuthService,ProductsService,AisleService, DepartmentsService,CreateprodService,DeleteProdService,CreateOrderService,CreateOrderDetailService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

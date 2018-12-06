@@ -1,3 +1,59 @@
-<p>
-  create-order-details works!
-</p>
+
+  <h2> Components for an Order </h2>
+  <ul>Who ordered?</ul>
+  <ul>What? </ul>
+  <ul>Is it still an active order?</ul>
+
+
+<div class="container">
+
+    <form (ngSubmit)="processForm()">
+
+<label for="title">User ID</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.UID">
+        </div>
+
+
+<label for="title">Order Number</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.orderNum">
+        </div>
+
+
+
+<label for="title">Days Since Prior Order</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.  DaysSincePrior">
+        </div>
+
+
+  <label for="title">Order Set</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.EvalSet">
+        </div>
+
+
+  <label for="title">Order Dow</label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.OrderDow">
+        </div>
+
+
+  <label for="title">Order Hour </label>
+        <div class="form group">
+            <input type="text" name="title" class="form-control" [(ngModel)]="order.OrderHour">
+        </div>
+
+
+
+
+
+
+
+
+
+            <br><br>
+        <input type="submit" value="save" class="btn btn-primary btn-lg">
+    </form>
+</div>
