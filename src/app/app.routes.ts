@@ -15,12 +15,15 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { EditDeleteProductComponent } from './edit-delete-product/edit-delete-product.component';
 import { UpdateProductComponent } from './edit-delete-product/update-product/update-product.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { CreateOrderDetailsComponent } from './create-order-details/create-order-details.component';
 
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
 
 { path: 'updateproduct', component: UpdateProductComponent },
+
+{ path: 'create-order-metadata', component: CreateOrderDetailsComponent},
 
   { path: 'callback', component: CallbackComponent },
 
