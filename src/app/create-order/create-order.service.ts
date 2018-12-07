@@ -11,6 +11,7 @@ export class CreateOrderService {
 
  private order = new Order();
 
+    private baseUrl = 'http://localhost:8080/api/orders';
 
   private baseUrl3 = 'http://localhost:8080/api/createOrder';
 
@@ -18,6 +19,13 @@ export class CreateOrderService {
   constructor(private http: HttpClient) {
   }
 
+  public deleteOrder(user) {
+    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
+  }
+
+   getAll(): Observable<any> {
+    return this.http.get<Order[]>(this.baseUrl).catch(this.errorHandler);
+  }
 
 
  createOrder(order:Order) {

@@ -39,7 +39,7 @@ if(this.auth.isAuthenticated()==true) {
        this._orderService.updateOrder(this.order).subscribe((order)=>{
          console.log(order);
 
-         this._rotuer.navigate(['']);
+         this._rotuer.navigate(['orders']);
 
 
        },(error)=>{
