@@ -12,6 +12,8 @@ export class CreateOrderDetailService {
  private order = new OrderDetail();
 
 
+  private baseUrl = 'http://localhost:8080/api/order_details';
+
   private baseUrl3 = 'http://localhost:8080/api/createOrderDetails';
 
 
@@ -29,10 +31,19 @@ export class CreateOrderDetailService {
    return this.http.put(this.baseUrl3,order).catch(this.errorHandler);
 
       }
+   getAll(): Observable<any> {
+    return this.http.get<Product[]>(this.baseUrl).catch(this.errorHandler);
+  }
+
+
 
  setter(order:OrderDetail){
      this.order=order;
    }
+
+ public deleteMetadata(user) {
+    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
+  }
 
   getter(){
     return this.order;
