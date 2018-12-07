@@ -46,6 +46,7 @@ import { UpdateProductComponent } from './edit-delete-product/update-product/upd
 import { OrdersComponent } from './create-order/orders/orders.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { CreateOrderDetailsComponent } from './create-order-details/create-order-details.component';
+import { OrderMetadataComponent } from './create-order-details/order-metadata/order-metadata.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { CreateOrderDetailsComponent } from './create-order-details/create-order
     OrdersComponent,
     CreateOrderComponent,
     CreateOrderDetailsComponent,
+    OrderMetadataComponent,
 
   ],
   imports: [
