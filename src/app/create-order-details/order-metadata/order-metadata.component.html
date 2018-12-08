@@ -1,3 +1,47 @@
-<p>
-  order-metadata works!
-</p>
+
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container" style="text-align: center">
+<div class="jumbotron">
+  <h3>
+   The purpose of the order metadata, is so LetsShop can do Statistics of orders, to get an insight of how strong the product is. <i class="fa fa-hand-peace-o" style="font-size:48px;color:red"></i>
+  </h3>
+</div>
+  <h2>FYI <i class="fa fa-bell"></i> </h2>
+   <nav class="navbar">
+      <input class="form-control" placeholder="Search BY ORDER ID" type="text" name="search" [(ngModel)]="filter">
+    </nav>
+  <div class="text-align:center">
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Order Id</td>
+        <td>Order Number </td>
+        <td>User Id</td>
+        <td>Eval Set</td>
+        <td>OrderDow</td>
+          <td>orderHour</td>
+             <td>Days since Prior Order</td>
+        <td>Delete?</td>
+        <td>Edit Order</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of orders | filter:filter | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 5,
+                                                      currentPage: page,
+                                                      totalItems: totalRec };let i = index">
+        <td>{{user.id}}</td>
+         <td>{{user.orderNum}}</td>
+      <td>{{user.uid}}</td>
+        <td>{{user.evalSet}}</td>
+       <td>{{user.orderDow}}</td>
+        <td>{{user.orderHour}}</td>
+            <td>{{user.daysSincePrior}}</td>
+  <td><button class="btn btn-danger" (click)="deleteOrder(user)"> Delete</button></td>
+
+  <td><button class="btn btn-danger" (click)="updateOrder(user)"> Edit </button></td>
+
+ <td></td>

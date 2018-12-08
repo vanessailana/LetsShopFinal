@@ -16,13 +16,16 @@ import { EditDeleteProductComponent } from './edit-delete-product/edit-delete-pr
 import { UpdateProductComponent } from './edit-delete-product/update-product/update-product.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { CreateOrderDetailsComponent } from './create-order-details/create-order-details.component';
+import { OrderMetadataComponent } from './create-order-details/order-metadata/order-metadata.component';
 
 import { OrdersComponent } from './create-order/orders/orders.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
 
-{ path: 'updateproduct', component: UpdateProductComponent },
+{ path: 'order-charactistics', component: OrderMetadataComponent },
+
+{ path: 'order-metadata', component: UpdateProductComponent },
 
 { path: 'orders', component: OrdersComponent },
 

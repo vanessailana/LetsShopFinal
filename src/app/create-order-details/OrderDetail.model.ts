@@ -5,6 +5,6 @@ export class OrderDetail {
      orderNum:number;
      orderDow:number;
      orderHour: number;
-     daysSincePrior:number;n;
+     daysSincePrior:number;
      uid:number;
 }

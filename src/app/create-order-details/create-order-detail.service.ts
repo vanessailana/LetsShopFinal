@@ -32,7 +32,7 @@ export class CreateOrderDetailService {
 
       }
    getAll(): Observable<any> {
-    return this.http.get<Product[]>(this.baseUrl).catch(this.errorHandler);
+    return this.http.get<OrderDetail[]>(this.baseUrl);
   }
 
 
