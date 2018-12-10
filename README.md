@@ -15,11 +15,10 @@
 6. view previous orders they made and change status
 7. calculator 
 8. Add, edit, delete inventory 
-9. Edit Department 
-10. Edit Aisle 
-11. forgot password 
-12. Change order status 
-13. View orders / Delete 
+9. View,Edit Department 
+10. View Edit Aisle
+11. create, edit, view, or delete orders and associated metadata
+
 
 
 ### Technologies used
