@@ -13,11 +13,10 @@ export class ProductsService {
   product = new Product();
   baseUrl = 'https://floating-peak-75558.herokuapp.com/products';
 
-  private baseUrl2 = 'http://localhost:8080/api/products/update/';
 
   private baseUrl3 = ' https://floating-peak-75558.herokuapp.com/products';
 
-   private baseUrl4 = 'http://localhost:8080/api/findproducts';
+   private baseUrl4
 
   constructor(private http: HttpClient) {
 

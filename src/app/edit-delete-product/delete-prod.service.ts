@@ -10,11 +10,10 @@ import { Product } from './product.model';
 
 export class DeleteProdService {
   private product = new Product();
-  private baseUrl = 'http://localhost:8080/api/products';
+  private baseUrl = 'https://floating-peak-75558.herokuapp.com/products';
 
-  private baseUrl2 = 'http://localhost:8080/api/products/update/';
 
-  private baseUrl3 = 'http://localhost:8080/api/createProduct';
+  private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/createProduct';
 
 
   constructor(private http: HttpClient) {

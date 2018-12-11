@@ -10,9 +10,9 @@ import 'rxjs/add/observable/throw';
 export class CreateprodService {
 
  private product = new Product();
-  private baseUrl = 'http://localhost:8080/api/products';
+  private baseUrl = 'https://floating-peak-75558.herokuapp.com/products';
 
-  private baseUrl3 = 'http://localhost:8080/api/createProduct';
+  private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/createProduct';
 
 
   constructor(private http: HttpClient) {
