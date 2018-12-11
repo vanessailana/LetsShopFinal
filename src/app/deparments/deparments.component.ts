@@ -34,7 +34,7 @@ departments: Array<any>;
 
     editDepartmentPage(department: Department) {
     this.departmentService.setter(department);
-     this.router.navigate(['/editdepartments']);
+     this.router.navigate(['/edit_departments']);
   }
 
 
