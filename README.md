@@ -35,7 +35,7 @@
 1. Model View Controller architecture 
 2. Object Relational Mapping 
 3. Dependency Injection 
-4. Authentication 
+4. Authentication (JWT token)
 5. Identity Management 
 6. Machine Learning 
 7. Unit testing 
@@ -44,3 +44,4 @@
 
 # LetsShop-Recommendation-Algorithms
 1. Using Diaglow Flow we were able to train and create a conversational interface. 
+2. Statistical Anaylsis on inventory and times of purchases.
