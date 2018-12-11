@@ -10,7 +10,7 @@ import { Department } from './department.model';
 
 export class DepartmentsService {
   private department = new Department();
-  private baseUrl = 'http://localhost:8080/api/departments';
+  private baseUrl = 'https://floating-peak-75558.herokuapp.com/departments';
   private baseUrl3 = 'http://localhost:8080/api/editDepartment';
 
 

@@ -10,6 +10,6 @@ describe('DepartmentsService', () => {
   });
 
   it('should be created', inject([DepartmentsService], (service: DepartmentsService) => {
-    expect(service).toBeTruthy();
+    expect(service).toBe(service);
   }));
 });
