@@ -1,4 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<h1>Search</h1>
+<h1 style="text-align: center">Departments</h1>
+   <nav class="navbar">
+      <input class="form-control" placeholder="search by name" type="text" name="search" [(ngModel)]="filter">
+    </nav>
 
 <div class="container" style="text-align: center">
 
@@ -21,7 +26,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of products | paginate: { id: 'listing_pagination',
+      <tr *ngFor="let user of products | filter:filter |  paginate: { id: 'listing_pagination',
                                                       itemsPerPage: 5,
                                                       currentPage: page,
                                                       totalItems: totalRec };let i = index">
