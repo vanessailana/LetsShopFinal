@@ -9,17 +9,14 @@
 
 ### As a user/employee (more benefits) 
 1. forget password or reset password 
-2. multifactor authentication 
-3. Anaylsis based on previous orders 
-5. Anaylsis of when is the best time to order? 
-6. view previous orders they made and change status
-7. calculator 
-8. Add, edit, delete inventory 
-9. Edit Department 
-10. Edit Aisle 
-11. forgot password 
-12. Change order status 
-13. View orders / Delete 
+2. Anaylsis based on previous orders 
+3. Anaylsis of when is the best time to order? 
+4. create, edit, view, or delete order metadata which is associated by orders
+5. create, edit, view, or delete orders
+6. Add, edit, delete inventory 
+7. View,Edit Department 
+8. View Edit Aisle
+9. calculator
 
 
 ### Technologies used
@@ -36,7 +33,7 @@
 1. Model View Controller architecture 
 2. Object Relational Mapping 
 3. Dependency Injection 
-4. Authentication 
+4. Authentication (JWT token)
 5. Identity Management 
 6. Machine Learning 
 7. Unit testing 
@@ -45,3 +42,4 @@
 
 # LetsShop-Recommendation-Algorithms
 1. Using Diaglow Flow we were able to train and create a conversational interface. 
+2. Statistical Anaylsis on inventory and times of purchases.
