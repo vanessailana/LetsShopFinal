@@ -7,7 +7,7 @@
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node server.js",
+    "start": "ng serve --proxy-config proxy.conf.json && node server.js",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
