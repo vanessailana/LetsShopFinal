@@ -47,7 +47,7 @@ export class  EditDeleteProductComponent implements OnInit {
 
   editProductPage(product: Product) {
     this.productService.setter(product);
-     this.router.navigate(['/updateproduct']);
+     this.router.navigate(['/order-metadata]);
   }
 
 
