@@ -11,11 +11,11 @@ import { Product } from './product.model';
 
 export class ProductsService {
   product = new Product();
-  baseUrl = 'https://limitless-fjord-5537.herokuapp.com/products';
+  baseUrl = 'https://floating-peak-75558.herokuapp.com/products';
 
   private baseUrl2 = 'http://localhost:8080/api/products/update/';
 
-  private baseUrl3 = 'http://localhost:8080/api/createProduct';
+  private baseUrl3 = ' https://floating-peak-75558.herokuapp.com/products';
 
    private baseUrl4 = 'http://localhost:8080/api/findproducts';
 
@@ -25,7 +25,10 @@ export class ProductsService {
 
  getAll(): Observable<any> {
 
-return this.http.get<Product[]>(this.baseUrl);
+
+
+return this.http.get(this.baseUrl);
+
 
 
 }
