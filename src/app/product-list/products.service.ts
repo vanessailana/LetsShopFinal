@@ -10,14 +10,8 @@ import { Product } from './product.model';
 @Injectable()
 
 export class ProductsService {
-  private product = new Product();
-  private baseUrl = 'http://localhost:8080/api/products';
+  product = new Product();
 
-  private baseUrl2 = 'http://localhost:8080/api/products/update/';
-
-  private baseUrl3 = 'http://localhost:8080/api/createProduct';
-
-   private baseUrl4 = 'http://localhost:8080/api/findproducts';
 
   constructor(private http: HttpClient) {
 
@@ -27,7 +21,7 @@ export class ProductsService {
 
 
 
-return this.http.get('http://localhost:8080/api/products');
+return this.http.get('https://limitless-fjord-55371.herokuapp.com/products');
 
 
 
