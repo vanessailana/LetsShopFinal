@@ -11,13 +11,12 @@
 1. forget password or reset password 
 2. Anaylsis based on previous orders 
 3. Anaylsis of when is the best time to order? 
-4. view previous orders they made and change status
-5. calculator 
+4. create, edit, view, or delete order metadata which is associated by orders
+5. create, edit, view, or delete orders
 6. Add, edit, delete inventory 
 7. View,Edit Department 
 8. View Edit Aisle
-9. create, edit, view, or delete orders and associated metadata
-
+9. calculator
 
 
 ### Technologies used
