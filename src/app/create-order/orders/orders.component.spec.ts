@@ -20,6 +20,6 @@ describe('OrdersComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBe(component);
   });
 });
