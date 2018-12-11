@@ -95,7 +95,7 @@ export class AuthService {
    public renewToken() {
     this.auth0.checkSession({}, (err, result) => {
       if (err) {
-        alert(`Could not get a new token (${err.error}: ${err.error_description}).`);
+        console.log(`Could not get a new token (${err.error}: ${err.error_description}).`);
       } else {
         alert(`Successfully renewed auth!`);
         this.setSession(result);
