@@ -44,7 +44,7 @@ export class AuthService {
   public getProfile(cb): void {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
-      throw new Error('Access token must exist to fetch profile');
+      console.log("Acess token must exist")
     }
 
     const self = this;

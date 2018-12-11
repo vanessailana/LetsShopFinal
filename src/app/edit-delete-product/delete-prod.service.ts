@@ -28,7 +28,7 @@ export class DeleteProdService {
   }
 
  public deleteProduct(user) {
-    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
+    return this.http.delete(this.baseUrl + "/"+ user.id);
   }
 
    updateProduct(product:Product){

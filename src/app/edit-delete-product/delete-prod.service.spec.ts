@@ -10,6 +10,6 @@ describe('DeleteProdService', () => {
   });
 
   it('should be created', inject([DeleteProdService], (service: DeleteProdService) => {
-    expect(service).toBeTruthy();
+    expect(service).toBe(service);
   }));
 });
