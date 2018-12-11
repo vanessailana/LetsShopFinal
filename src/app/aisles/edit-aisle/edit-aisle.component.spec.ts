@@ -20,6 +20,6 @@ describe('EditAisleComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBe(component);
   });
 });
