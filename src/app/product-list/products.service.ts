@@ -11,7 +11,7 @@ import { Product } from './product.model';
 
 export class ProductsService {
   product = new Product();
-  private baseUrl = 'http://floating-peak-75558.herokuapp.com/products/products';
+  private baseUrl = 'http://limitless-fjord-5537.herokuapp.com/products';
 
   private baseUrl2 = 'http://localhost:8080/api/products/update/';
 
