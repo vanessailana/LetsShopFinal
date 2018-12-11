@@ -11,7 +11,7 @@ import { Product } from './product.model';
 
 export class ProductsService {
   product = new Product();
-  private baseUrl = 'http://limitless-fjord-5537.herokuapp.com/products';
+  private baseUrl = 'https://limitless-fjord-5537.herokuapp.com/products';
 
   private baseUrl2 = 'http://localhost:8080/api/products/update/';
 
@@ -27,7 +27,7 @@ export class ProductsService {
 
 
 
-return this.http.get('https://limitless-fjord-55371.herokuapp.com/products');
+return this.http.get(baseUrl);
 
 
 
