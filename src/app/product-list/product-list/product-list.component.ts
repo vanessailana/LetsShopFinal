@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { filter } from 'rxjs/operators';
+
 import { ProductsService } from '../products.service';
 import { Product } from '../product.model';
 import { Router } from '@angular/router';
