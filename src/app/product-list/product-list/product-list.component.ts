@@ -3,6 +3,7 @@ import { ProductsService } from '../products.service';
 import { Product } from '../product.model';
 import { Router } from '@angular/router';
 import {Headers, Response} from '@angular/http';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',

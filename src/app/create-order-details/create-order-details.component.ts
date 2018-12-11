@@ -11,7 +11,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class CreateOrderDetailsComponent implements OnInit {
 
-private order:OrderDetail;
+ order:OrderDetail;
   constructor(private _orderService:CreateOrderDetailService,private _rotuer:Router,public auth: AuthService) { }
 
   ngOnInit() {

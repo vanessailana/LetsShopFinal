@@ -11,7 +11,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class CreateProductComponent implements OnInit {
 
-private product:Product;
+product:Product;
   constructor(private _productService:CreateprodService,private _rotuer:Router,public auth: AuthService) { }
 
   ngOnInit() {

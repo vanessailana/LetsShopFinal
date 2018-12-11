@@ -12,7 +12,7 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class EditAisleComponent implements OnInit {
 
-private aisle:Aisle;
+aisle:Aisle;
   constructor(private _aisleService:AisleService,private _rotuer:Router,public auth: AuthService) { }
 
   ngOnInit() {

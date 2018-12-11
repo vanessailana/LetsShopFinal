@@ -10,8 +10,7 @@ import { DeleteProdService } from '../delete-prod.service';
 })
 export class UpdateProductComponent implements OnInit {
 
-
-private product:Product;
+product:Product;
   constructor(private _prodService:DeleteProdService,private _rotuer:Router,public auth: AuthService) { }
 
   ngOnInit() {

@@ -4,4 +4,5 @@ export class Product {
     aisleId: number;
     departmentId: number;
      active: boolean;
+     price:number;
 }

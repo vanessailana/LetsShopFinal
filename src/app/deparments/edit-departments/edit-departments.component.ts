@@ -10,8 +10,7 @@ import { DepartmentsService } from '../departments.service';
 })
 export class EditDepartmentsComponent implements OnInit {
 
-
-private department:Department;
+ department:Department;
   constructor(private _departmentService:DepartmentsService,private _rotuer:Router,public auth: AuthService) { }
 
   ngOnInit() {

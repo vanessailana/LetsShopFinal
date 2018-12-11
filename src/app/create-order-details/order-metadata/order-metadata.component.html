@@ -8,9 +8,7 @@
   </h3>
 </div>
   <h2>FYI <i class="fa fa-bell"></i> </h2>
-   <nav class="navbar">
-      <input class="form-control" placeholder="Search BY ORDER ID" type="text" name="search" [(ngModel)]="filter">
-    </nav>
+
   <div class="text-align:center">
     <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
   </div>
@@ -29,7 +27,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of orders | filter:filter | paginate: { id: 'listing_pagination',
+      <tr *ngFor="let user of orders | paginate: { id: 'listing_pagination',
                                                       itemsPerPage: 5,
                                                       currentPage: page,
                                                       totalItems: totalRec };let i = index">
