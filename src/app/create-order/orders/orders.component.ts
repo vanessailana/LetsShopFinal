@@ -47,7 +47,7 @@ export class  OrdersComponent implements OnInit {
 
   updateOrder(order: Order) {
     this.orderService.setter(order);
-     this.router.navigate(['create-order-metadata']);
+     this.router.navigate(['create-order']);
   }
 
 
