@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AisleService {
 private aisle = new Aisle();
-private baseUrl = 'http://localhost:8080/api/aisles';
-private baseUrl3 = 'http://localhost:8080/api/editAisle';
+private baseUrl = 'https://floating-peak-75558.herokuapp.com/aisles';
+private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/editAisle';
 
   constructor(private http: HttpClient) {
   }
