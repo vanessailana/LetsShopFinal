@@ -11,7 +11,13 @@ import { Product } from './product.model';
 
 export class ProductsService {
   product = new Product();
+  private baseUrl = 'http://floating-peak-75558.herokuapp.com/products/products';
 
+  private baseUrl2 = 'http://localhost:8080/api/products/update/';
+
+  private baseUrl3 = 'http://localhost:8080/api/createProduct';
+
+   private baseUrl4 = 'http://localhost:8080/api/findproducts';
 
   constructor(private http: HttpClient) {
 
