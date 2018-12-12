@@ -10,7 +10,10 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   userProfile: any;
-  requestedScopes: string = 'openid profile';
+    private _scopes: string;
+
+requestedScopes: string = 'openid profile read:messages write:messages';
+
  refreshSubscription: any;
   auth0 = new auth0.WebAuth({
     clientID: AUTH_CONFIG.clientID,

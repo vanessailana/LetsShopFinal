@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
    if(this.auth.isAuthenticated()==true) {
    this.router.navigate(['/admin']);
    } else {
-   console.log("good you are not authenticated");
+  this.router.navigate(['']);
    }
   }
 
