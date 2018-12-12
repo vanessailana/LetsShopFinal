@@ -12,7 +12,7 @@ export class CreateOrderDetailService {
  private order = new OrderDetail();
 
 
-  private baseUrl = 'https://floating-peak-75558.herokuapp.com/order_details';
+  private baseUrl = 'https://floating-peak-75558.herokuapp.com/order_details/';
 
   private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/createOrderDetails';
 
@@ -42,7 +42,7 @@ export class CreateOrderDetailService {
    }
 
  public deleteMetadata(user) {
-    return this.http.delete(this.baseUrl + "/"+ user.id);
+    return this.http.delete(this.baseUrl + user.id);
   }
 
   getter(){
