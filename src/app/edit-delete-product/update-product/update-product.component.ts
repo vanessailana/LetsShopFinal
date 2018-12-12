@@ -20,7 +20,7 @@ if(this.auth.isAuthenticated()==true) {
     this.product=this._prodService.getter();
   }
   else {
-  this._rotuer.navigate(['offered']);
+  this._rotuer.navigate(['']);
   }
   }
 
