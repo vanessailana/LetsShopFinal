@@ -1,7 +1,6 @@
 export class OrderDetail {
     id: number;
-
-    evalSet: number;
+     evalSet: string;
      orderNum:number;
      orderDow:number;
      orderHour: number;
