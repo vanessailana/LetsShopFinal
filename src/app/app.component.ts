@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent implements OnInit {
   profile: any;
 
-  constructor(public auth: AuthService) {
+  constructor(public auth: AuthService,private router: Router) {
     auth.handleAuthentication();
       auth.scheduleRenewal();
       auth.renewToken();
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
       this.auth.getProfile((err, profile) => {
         this.profile = profile;
       });
+      this.router.navigate([' ']);
     }
   }
 
