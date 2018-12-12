@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { OrderDetail } from './OrderDetail.model';
 import { Http, Response,RequestOptions } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 @Injectable()
@@ -11,21 +11,15 @@ export class CreateOrderDetailService {
 
  private order = new OrderDetail();
 
-    private baseUrl = 'https://floating-peak-75558.herokuapp.com/orders_details';
 
-  private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/createOrderDetails';
+  private baseUrl = 'https://warm-tundra-14923.herokuapp.com/order_details';
+
+  private baseUrl3 = 'https://warm-tundra-14923.herokuapp.com/createOrderDetails';
 
 
   constructor(private http: HttpClient) {
   }
 
-  public deleteMetadata(user) {
-    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
-  }
-
-   getAll(): Observable<any> {
-    return this.http.get<OrderDetail[]>(this.baseUrl).catch(this.errorHandler);
-  }
 
 
  createOrder(order:OrderDetail) {
@@ -37,10 +31,19 @@ export class CreateOrderDetailService {
    return this.http.put(this.baseUrl3,order).catch(this.errorHandler);
 
       }
+   getAll(): Observable<any> {
+    return this.http.get<OrderDetail[]>(this.baseUrl);
+  }
+
+
 
  setter(order:OrderDetail){
      this.order=order;
    }
+
+ public deleteMetadata(user) {
+    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
+  }
 
   getter(){
     return this.order;
