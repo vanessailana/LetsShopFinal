@@ -31,7 +31,7 @@ if(this.auth.isAuthenticated()==true) {
     if(this.order.id==undefined){
        this._orderService.createOrder(this.order).subscribe((order)=>{
          console.log(order);
-         this._rotuer.navigate(['order_characteristics']);
+         this._rotuer.navigate([' ']);
        },(error)=>{
          console.log(error);
        });

@@ -55,7 +55,7 @@ export class OrderMetadataComponent implements OnInit {
 
        this._orderdetailService.updateOrder(this.order).subscribe((order)=>{
 
-         this._rotuer.navigate([' ']);
+         this._rotuer.navigate(['order_characteristics']);
        },(error)=>{
          console.log(error);
        });
