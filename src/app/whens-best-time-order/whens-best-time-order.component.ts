@@ -16,7 +16,7 @@ constructor(private router: Router,public auth: AuthService) { }
  if(this.auth.isAuthenticated()==true) {
  alert("You cab be here");
  } else {
- this.router.navigate(['']);
+ this.router.navigate(['offered']);
  }
   }
 

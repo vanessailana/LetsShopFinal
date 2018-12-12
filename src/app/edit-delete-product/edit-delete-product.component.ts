@@ -32,7 +32,7 @@ export class  EditDeleteProductComponent implements OnInit {
         this.products = data;
       });
 } else {
-  this.router.navigate(['']);
+  this.router.navigate(['offered']);
 }
 
   };

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import { Observable } from 'rxjs';
-(window as any).global = window;
+
 
 @Injectable()
 export class AuthService {
@@ -57,8 +57,7 @@ export class AuthService {
   public getProfile(cb): void {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
-      throw new Error('Access token must exist to fetch profile');
-      this.router.navigate(['']);
+      this.router.navigate(['offered']);
     }
 
     const self = this;
@@ -156,3 +155,4 @@ export class AuthService {
 
 
 
+github

@@ -36,7 +36,7 @@ profile: any;
    alert("authorized");
    } else {
     console.log("not authorixed");
-    this.router.navigate([' ']);
+    this.router.navigate(['offered']);
    }
 
 

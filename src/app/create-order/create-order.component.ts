@@ -21,7 +21,7 @@ if(this.auth.isAuthenticated()==true) {
     this.order=this._orderService.getter();
 } else {
 
-  this._rotuer.navigate(['']);
+  this._rotuer.navigate(['offered']);
 
 }
 

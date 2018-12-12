@@ -30,7 +30,7 @@ aisles: Array<any>;
     });
 } else {
   alert("You are not authenticated");
-  this.router.navigate(['']);
+  this.router.navigate(['offered']);
 }
   }
       private loadProd(){
