@@ -24,21 +24,21 @@ export class CreateOrderService {
   }
 
    getAll(): Observable<any> {
-    return this.http.get<Order[]>(this.baseUrl).catch(this.errorHandler);
+    return this.http.get<OrderDetail[]>(this.baseUrl).catch(this.errorHandler);
   }
 
 
- createOrder(order:Order) {
+ createOrder(order:OrderDetail) {
     return this.http.post(this.baseUrl3,order).catch(this.errorHandler);
   }
 
-  updateOrder(order:Order){
+  updateOrder(order:OrderDetail){
 
    return this.http.put(this.baseUrl3,order).catch(this.errorHandler);
 
       }
 
- setter(order:Order){
+ setter(order:OrderDetail){
      this.order=order;
    }
 
