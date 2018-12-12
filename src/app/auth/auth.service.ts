@@ -10,10 +10,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   userProfile: any;
-    private _scopes: string;
-
-requestedScopes: string = 'openid profile read:messages write:messages';
-
+  requestedScopes: string = 'openid profile';
  refreshSubscription: any;
   auth0 = new auth0.WebAuth({
     clientID: AUTH_CONFIG.clientID,
@@ -47,7 +44,7 @@ requestedScopes: string = 'openid profile read:messages write:messages';
   public getProfile(cb): void {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
-      console.log("Acess token must exist")
+      throw new Error('Access token must exist to fetch profile');
     }
 
     const self = this;
@@ -98,7 +95,7 @@ requestedScopes: string = 'openid profile read:messages write:messages';
    public renewToken() {
     this.auth0.checkSession({}, (err, result) => {
       if (err) {
-        console.log(`Could not get a new token (${err.error}: ${err.error_description}).`);
+        console('Could not get a new token')
       } else {
         alert(`Successfully renewed auth!`);
         this.setSession(result);
