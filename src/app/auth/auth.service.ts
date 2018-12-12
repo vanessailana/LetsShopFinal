@@ -14,7 +14,7 @@ export class AuthService {
   userProfile: any;
     refreshSubscription: any;
   requestedScopes: string = 'openid profile';
- refreshSubscription: any;
+
   auth0 = new auth0.WebAuth({
     clientID: AUTH_CONFIG.clientID,
     domain: AUTH_CONFIG.domain,
