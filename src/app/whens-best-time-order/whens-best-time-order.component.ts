@@ -14,7 +14,7 @@ constructor(private router: Router,public auth: AuthService) { }
   ngOnInit() {
 
  if(this.auth.isAuthenticated()==true) {
- alert("You cab be here");
+ alert("You can be here");
  } else {
  this.router.navigate(['']);
  }

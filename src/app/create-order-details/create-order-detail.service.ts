@@ -23,7 +23,7 @@ export class CreateOrderDetailService {
 
 
  createOrder(order:OrderDetail) {
-    return this.http.post(this.baseUrl3,order).catch(this.errorHandler);
+    return this.http.post(this.baseUrl3,order)
   }
 
   updateOrder(order:OrderDetail){
@@ -42,7 +42,7 @@ export class CreateOrderDetailService {
    }
 
  public deleteMetadata(user) {
-    return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
+    return this.http.delete(this.baseUrl + "/"+ user.id);
   }
 
   getter(){
