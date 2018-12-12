@@ -8,8 +8,11 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-
+  private _idToken: string;
+  private _accessToken: string;
+  private _expiresAt: number;
   userProfile: any;
+    refreshSubscription: any;
   requestedScopes: string = 'openid profile';
  refreshSubscription: any;
   auth0 = new auth0.WebAuth({
@@ -20,9 +23,19 @@ export class AuthService {
     redirectUri: AUTH_CONFIG.callbackURL,
     scope: this.requestedScopes
   });
+  constructor(public router: Router) {
+    this._idToken = '';
+    this._accessToken = '';
+    this._expiresAt = 0;
+  }
 
-  constructor(public router: Router) {}
+  get accessToken(): string {
+    return this._accessToken;
+  }
 
+  get idToken(): string {
+    return this._idToken;
+  }
   public login(): void {
     this.auth0.authorize();
   }
@@ -95,7 +108,7 @@ export class AuthService {
    public renewToken() {
     this.auth0.checkSession({}, (err, result) => {
       if (err) {
-        console('Could not get a new token')
+        console.log('Could not get a new token')
       } else {
         alert(`Successfully renewed auth!`);
         this.setSession(result);
