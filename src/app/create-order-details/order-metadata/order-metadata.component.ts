@@ -31,7 +31,7 @@ export class OrderMetadataComponent implements OnInit {
         this.orders = data;
       });
 } else {
-  this._rotuer.navigate(['']);
+  this._rotuer.navigate(['offered']);
 }
 
   };

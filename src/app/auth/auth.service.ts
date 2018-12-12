@@ -58,6 +58,7 @@ export class AuthService {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
       throw new Error('Access token must exist to fetch profile');
+      this.router.navigate(['']);
     }
 
     const self = this;
@@ -110,7 +111,7 @@ export class AuthService {
       if (err) {
         console.log('Could not get a new token')
       } else {
-        alert(`Successfully renewed auth!`);
+        console.log("token has been renewed");
         this.setSession(result);
 
       }

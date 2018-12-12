@@ -4,7 +4,7 @@ interface AuthConfig {
   callbackURL: string;
   apiUrl: string;
 }
-
+#api Url not used
 export const AUTH_CONFIG: AuthConfig = {
   clientID: 'WNpe9mhpApNvI198mBLJwN1v8JwJVpHL',
   domain: 'letsshop.auth0.com',
