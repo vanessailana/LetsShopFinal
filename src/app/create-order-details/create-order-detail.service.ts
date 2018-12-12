@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 @Injectable()
-export class CreateOrderService {
+export class CreateOrderDetailService {
 
  private order = new OrderDetail();
 
