@@ -19,7 +19,7 @@ export class CreateOrderService {
   constructor(private http: HttpClient) {
   }
 
-  public deleteOrder(user) {
+  public deleteMetadata(user) {
     return this.http.delete(this.baseUrl + "/"+ user.id).catch(this.errorHandler);
   }
 
