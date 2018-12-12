@@ -153,6 +153,3 @@ export class AuthService {
 
 }
 
-
-
-github
