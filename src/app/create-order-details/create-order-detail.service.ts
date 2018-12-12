@@ -15,7 +15,7 @@ export class CreateOrderDetailService {
  private baseUrl = 'https://floating-peak-75558.herokuapp.com/order_details';
 
 
-  private baseUrl3 = 'http://localhost:8080/api/createOrderDetails';
+  private baseUrl3 = 'https://floating-peak-75558.herokuapp.com/createOrderDetails';
 
 
   constructor(private http: HttpClient) {
