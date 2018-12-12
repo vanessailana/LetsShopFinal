@@ -17,6 +17,8 @@
         <td>Active </td>
         <td>Product Name</td>
         <td>User Order Number (User Id)</td>
+        <td>Aisle Name</td>
+          <td>Department Name</td>
         <td>Delete?</td>
         <td>Edit Order</td>
       </tr>
@@ -32,7 +34,10 @@
 
         <td>{{user.orderNum}}</td>
 
+      <td>{{user.product.aisle.name}}</td>
 
+
+      <td>{{user.product.department.title}}</td>
   <td><button class="btn btn-danger" (click)="deleteOrder(user)"> Delete</button></td>
 
   <td><button class="btn btn-danger" (click)="updateOrder(user)"> Edit </button></td>
@@ -45,3 +50,4 @@
   </table>
 
 </div>
+
